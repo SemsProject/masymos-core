@@ -227,7 +227,7 @@ public class RankAggregation {
 			//Compare the rankings of model1 and model2 in ranker_i and increase / decrease the distance
 			if (rankingOfModel1 > rankingOfModel2)
 				distanceToRankers[i]++;
-			else 
+			else if (rankingOfModel1 < rankingOfModel2)
 				distanceToRankers[i]--;
 			
 			sumDistance += distanceToRankers[i]; //Add the modified distance to the sum
@@ -253,6 +253,7 @@ public class RankAggregation {
 	private static List<VersionResultSet> adj (List<RankerHandler>rankersListH, RankerHandler aggregateRankerH){ //adjacent pairs, based on Ke-tau
 		double dintanceMin = 0; //The minimal average distance so far
 		int count = 0; //Counts the rounds of swapping every two adjacent models in the initial ranker
+		int numOfSwaps = 0;
 		ArrayList<String> uniqueVersionIDList = aggregateRankerH.getUniqueVersionIDList();
 		int ranker_iLength = rankersListH.size();
 		//The distance between the aggregate ranker and each other ranker in the rankersList
@@ -269,7 +270,8 @@ public class RankAggregation {
 		//The initial distanceMin = the initial average distance
 		dintanceMin = dintanceMin / rankersListH.size();
 		
-		while (count < 100){ //repeat 100 rounds
+		while ((count < 100) && (numOfSwaps > 0)){ //repeat 100 rounds
+			numOfSwaps = 0;
 			for(int i = 0; i < aggregateRankerH.getRankerSize() - 2; i++){
 				aggregateRankerH.swap(uniqueVersionIDList.get(i), uniqueVersionIDList.get(i+1));
 				for(int r = 0; r < 4; r++)
@@ -277,6 +279,7 @@ public class RankAggregation {
 				double distAvg = distanceAvg(rankersListH, aggregateRankerH, uniqueVersionIDList.get(i), uniqueVersionIDList.get(i+1), tempDistanceToRankers);
 				if (distAvg < dintanceMin){ //If average distance has been improved after swapping
 					dintanceMin = distAvg; //Update the minimal distance
+					numOfSwaps++;
 					for(int r = 0; r < 4; r++) //Update the distances to the rankers
 						distanceToRankers[r] = tempDistanceToRankers[r];
 				}
