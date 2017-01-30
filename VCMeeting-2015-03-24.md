@@ -5,6 +5,7 @@ attendees
 
 discussion/problems 
 --------------------
+
 * immer gesamten grpah speichern? mit allen internals? macht ron ja gerade schon.. is das gut?
  * pro:
    * interne links

@@ -4,7 +4,7 @@ Meeting 22.06.2016
 -------------------
 We structured the todos:
 
-[[Image(IMG_20160622_132441.jpg, 700px, border=2, title="dependency graph for the /BiVeS project")]]
+![IMG_20160622_132441.jpg](RetrievalVersionExtension/IMG_20160622_132441.jpg)
 
 * red is the published stuff
 * green is the stuff made by MP
@@ -12,7 +12,9 @@ We structured the todos:
 
 Meeting 27.06.2016 
 -------------------
+
 ### State of the Arts 
+
 Documents have these fields:
 ```
 VERSIONID	7ecd2201f8f18c70ae73257a07c1af920ac1e5b2
@@ -162,4 +164,4 @@ This way, old application still find all entries that they are looking for. Addi
 
 Meeting 2016-06-29 
 -------------------
-[[Image(IMG_20160629_111747.jpg, 700px, border=2, title="board shot")]]
+![IMG_20160629_111747.jpg](RetrievalVersionExtension/IMG_20160629_111747.jpg)
