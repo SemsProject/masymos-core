@@ -42,7 +42,7 @@ C -[HAS_DIFF_ENTRY]-> E {bives.attributes}
 
 If some app now asks morre for some search results, it gets some JSON array with results being JSON objects:
 
-```
+```json
 [
     {
         "documentURI": "https://models.physiomeproject.org/exposure/d86b21d4e6bf68e94e20001a159fb9dd/adrian_chandler_hodgkin_1970.cellml",
@@ -75,7 +75,8 @@ However to make confusion complete: There is a naming glitch between ```fileID` 
 
 **MS:** The modelID is not unique :(
 for example, these two results are two different models:
-```
+
+```json
 [
     {
         "documentURI": "https://models.physiomeproject.org/exposure/1e1bee6ef3243503e7e1531cfd61bb3f/novak_tyson_1993_a.cellml",
@@ -108,7 +109,7 @@ Nevertheless, we propose the following structure:
 
 That means this:
 
-```
+```json
 [
     {
         "score": 0.7,
@@ -128,7 +129,8 @@ That means this:
 ]
 ```
 becomes this:
-```
+
+```json
 [
     {
         "score": 0.7,
