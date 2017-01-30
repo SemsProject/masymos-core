@@ -4,7 +4,7 @@ Meeting 22.06.2016
 -------------------
 We structured the todos:
 
-![IMG_20160622_132441.jpg](RetrievalVersionExtension/IMG_20160622_132441.jpg)
+![IMG_20160622_132441.jpg](RetrievalVersionExtension/IMG_20160622_132441.jpg width=350)
 
 * red is the published stuff
 * green is the stuff made by MP
@@ -166,4 +166,4 @@ This way, old application still find all entries that they are looking for. Addi
 
 Meeting 2016-06-29 
 -------------------
-![IMG_20160629_111747.jpg](RetrievalVersionExtension/IMG_20160629_111747.jpg)
+![IMG_20160629_111747.jpg](RetrievalVersionExtension/IMG_20160629_111747.jpg width=350)
