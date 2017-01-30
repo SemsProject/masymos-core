@@ -35,3 +35,5 @@ open questions
 * difference between URI und XMLDOC in doc node von db?
 * where to insert the code in masymos?
 * how to represent diff ontology in db? should we link our diff nodes to the ontology? how is that done for cdc2?
+
+<img src="VCMeeting-2015-03-24/vc-idea1.jpg" width="550" />
